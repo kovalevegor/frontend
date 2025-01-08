@@ -1,0 +1,136 @@
+/* Контейнер страницы */
+.BorrowPageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #131416;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+
+/* Форма для займа */
+.BorrowForm {
+    width: 700px;
+    padding: 20px 36px;
+    border-radius: 25px;
+    background-color: #131416;
+    color: #ffffff;
+    /*border: 1px solid #ffffff;*/
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);*/
+}
+
+/* Блоки с текстом и полями */
+.CollateralBlock, .BorrowBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.BlockLabel {
+    font-size: 18pt;
+    font-weight: 500;
+    color: #797D82;
+}
+
+/* Поле для ввода суммы */
+.AmountInput {
+    font-size: 24pt;
+    font-weight: bold;
+    border: 2px solid #797D82;
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffffff;
+    background: #1F2022;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Селектор токенов */
+.TokenSelector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.TokenSelector img {
+    width: 50px;
+    height: 50px;
+}
+
+.DropdownArrow {
+    width: 20px;
+    height: 20px;
+}
+
+/* Информационные блоки */
+.BorrowInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.InfoItem {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16pt;
+    color: #797D82;
+}
+
+/* Коэффициент работоспособности */
+.HealthFactor {
+    font-weight: bold;
+}
+
+.HealthFactor.Healthy {
+    color: #86A67D;
+}
+
+.HealthFactor.Unhealthy {
+    color: #F65447;
+}
+
+/* Кнопки действий */
+.ActionButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.ActionButton {
+    width: 48%;
+    padding: 12px;
+    font-size: 16pt;
+    font-weight: bold;
+    color: white;
+    background-color: #797D82;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.ActionButton:disabled {
+    background-color: #b3b3b3;
+    cursor: not-allowed;
+}
+
+.ActionButton.Borrow {
+    background-color: #F65447;
+}
+
+.ActionButton.Borrow:hover:not(:disabled) {
+    background-color: #F65447;
+}
+
+.ActionButton.Repay {
+    background-color: #86A67D;
+}
+
+.ActionButton.Repay:hover:not(:disabled) {
+    background-color: #86A67D;
+}

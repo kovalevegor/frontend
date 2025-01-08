@@ -1,0 +1,53 @@
+/* src/styles/MainContent.css */
+
+.MainContentContainer {
+    width: 60vw  !important;
+    height: 80vh;
+    margin: 270px auto 0; /* Центрирование по горизонтали и отступ сверху */
+    /*background-color: rgba(255, 255, 255, 0.1); !* Полупрозрачный фон *!*/
+    border-radius: 15px; /* Скругленные углы */
+    position: relative; /* Для позиционирования внутреннего содержимого */
+    /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); !* Тень для блока *!*/
+    overflow: hidden;
+}
+
+/* Текстовые стили */
+.MainTextContainer {
+    position: absolute;
+    top: 10%; /* Отступ 10% от верхнего края блока */
+    left: 20px; /* Отступ слева */
+    right: 20px; /* Отступ справа */
+    text-align: left; /* Выравнивание текста по левому краю */
+    color: #ffffff;
+    padding: 0; /* Дополнительный внутренний отступ (если требуется) */
+    word-wrap: break-word; /* Перенос слов, чтобы текст не выходил за границы */
+    overflow: hidden; /* Препятствует переполнению текста */
+}
+
+.MainText.bold {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Отступ между заголовком и абзацем */
+}
+
+.MainText.light {
+    margin-left: 100px;
+    font-size: 26px !important;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Стили для изображения */
+.MainImage {
+    position: absolute;
+    bottom: 0; /* Привязка к нижнему краю */
+    left: 50%; /* Центрирование изображения по горизонтали */
+    transform: translateX(-50%); /* Центрирование относительно ширины */
+    max-width: 80%;
+    max-height: 90%; /* Изображение занимает максимум 50% высоты блока */
+    object-fit: contain; /* Удерживает пропорции изображения */
+}
+p {
+    margin-bottom: 10px; /* Отступы между абзацами */
+}
+

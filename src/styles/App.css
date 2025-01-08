@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Disket Mono";
+    src: url("../assets/fonts/Disket-Mono-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Inter-Bold";
+    src: url("../assets/fonts/Inter-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Inter-Light";
+    src: url("../assets/fonts/Inter-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter-Light", Arial, sans-serif;
+}

@@ -1,0 +1,181 @@
+/* Контейнер страницы */
+.TradePageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #131416;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+
+/* Общий стиль блоков */
+.TradeBlock {
+    width: 700px;
+    height: 300px;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 36px;
+    box-sizing: border-box;
+}
+
+/* Блок "Продать" */
+.TradeBlock-Sell {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+/* Блок "Приобрести" */
+.TradeBlock-Buy {
+    background-color: white;
+    color: #131416;
+    transform: translateY(-25%);
+}
+
+
+/* Надписи "Продать" и "Приобрести" */
+.TradeLabel {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    font-size: 20pt;
+    color: #525559;
+    font-weight: 300;
+}
+
+/* Поле для ввода количества токенов */
+.TokenAmountInput {
+    font-size: 40pt;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    text-align: left;
+    color: white;
+    background: transparent;
+    flex: 1;
+    max-width: 60%;
+}
+
+.TokenAmountInput.ReadOnly {
+    color: #131416;
+    pointer-events: none;
+}
+
+/* Числовое значение в долларах */
+.DollarAmount {
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    font-size: 20pt;
+    color: #525559;
+    font-weight: 300;
+}
+
+/* Селектор токенов */
+.TokenSelector {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    gap: 8px;
+    width: 40%; /* Задаем ширину селектора */
+    max-width: 300px; /* Ограничение максимальной ширины */
+    margin-left: auto; /* Отодвигаем от поля ввода */
+}
+
+.TokenSelector img {
+    width: 75px;
+    height: 75px;
+}
+
+.DropdownArrow {
+    width: 20px;
+    height: 20px;
+}
+
+/* Блок обмена */
+.SwapBlock {
+    width: 75px;
+    height: 75px;
+    border: 5px solid #131416;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.SwapIcon img {
+    width: 40px;
+    height: 40px;
+}
+
+.DropdownArrow {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* Выпадающее меню */
+.DropdownMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1e1e1e;
+    border: 1px solid #525559;
+    border-radius: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    z-index: 1000;
+    width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Элементы меню */
+.DropdownItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: white !important;
+    font-size: 14pt;
+    font-weight: 300;
+    transition: background-color 0.2s ease;
+}
+
+.DropdownItem:hover {
+    background-color: #525559;
+}
+
+.DropdownItem img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Текст в селекторе токенов для блока Sell */
+.TradeBlock-Sell .TokenSelector span {
+    color: white; /* Белый цвет для текста в селекторе */
+}
+
+/* Текст в селекторе токенов для блока Buy */
+.TradeBlock-Buy .TokenSelector span {
+    color: #131416; /* Цвет #131416 для текста в селекторе */
+}
+
+/* Элементы меню для блока "Продать" */
+.TradeBlock-Sell .DropdownMenu .DropdownItem {
+    color: white; /* Белый цвет текста в меню */
+}
+
+/* Элементы меню для блока "Приобрести" */
+.TradeBlock-Buy .DropdownMenu .DropdownItem {
+    color: #131416; /* Цвет текста в меню для блока "Приобрести" */
+}
+
+
