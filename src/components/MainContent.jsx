@@ -1,7 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+import { ethers } from "ethers";
 import "../styles/MainContent.css";
 
+const connectToMetaMask = async () => {
+    if (window.ethereum) {
+        try {
+            const client = new ethers.BrowserProvider(window.ethereum);
+            const signer = await client.getSigner();
+            return { client, signer };
+        } catch (error) {
+            console.error("User denied account access or error occurred", error);
+            throw error;
+        }
+    } else {
+        console.log("metamask is not installed");
+        throw new Error("metamask is not installed");
+    }
+};
+
 const MainContent = ({ activeIcon }) => {
+    const [account, setAccount] = useState(null);
+    
+    const handleConnectWallet = async () => {
+        try {
+            const { client, signer } = await connectToMetaMask();
+            setAccount(await signer.getAddress());
+        } catch (error) {
+            console.error("Failed to connect to MetaMask", error);
+        }
+    };
+
     const content = [
         {
             type: "image",
@@ -63,6 +91,12 @@ const MainContent = ({ activeIcon }) => {
                     <div className="MainText light">
                         {renderDescription(activeContent.description)}
                     </div>
+                    {activeContent.title === "КОШЕЛЕК" && (
+                        <div>
+                            <button onClick={handleConnectWallet}>Connect to MetaMask</button>
+                            {account && <p>Connected Account: {account}</p>}
+                        </div>
+                    )}
                 </div>
             );
         }
