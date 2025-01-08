@@ -7,6 +7,7 @@ const Navigation = ({ onIconClick, activeIcon }) => {
         { name: "review", src: "/images/review.png" },
         { name: "features", src: "/images/features.png" },
         { name: "wallet", src: "/images/wallet.png" },
+        { name: "rent", src: "/images/rent.png" },
     ];
 
     return (
